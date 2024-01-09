@@ -11,6 +11,9 @@
 		6A91205A2A62D0E400C962C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9120592A62D0E400C962C4 /* ContentView.swift */; };
 		6A91205C2A62D0E500C962C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A91205B2A62D0E500C962C4 /* Assets.xcassets */; };
 		6A91205F2A62D0E500C962C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A91205E2A62D0E500C962C4 /* Preview Assets.xcassets */; };
+		6A9120682A62D1F900C962C4 /* MetalShading.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6A9120672A62D1F900C962C4 /* MetalShading.metal */; };
+		6A91206B2A62D6AF00C962C4 /* ShaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91206A2A62D6AF00C962C4 /* ShaderController.swift */; };
+		6A9120712A63893E00C962C4 /* MetalViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9120702A63893E00C962C4 /* MetalViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,11 @@
 		6A9120592A62D0E400C962C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6A91205B2A62D0E500C962C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A91205E2A62D0E500C962C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6A9120672A62D1F900C962C4 /* MetalShading.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalShading.metal; sourceTree = "<group>"; };
+		6A9120692A62D50B00C962C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6A91206A2A62D6AF00C962C4 /* ShaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderController.swift; sourceTree = "<group>"; };
+		6A9120702A63893E00C962C4 /* MetalViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewRepresentable.swift; sourceTree = "<group>"; };
+		6A9120722A63985600C962C4 /* definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = definitions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,15 @@
 		6A9120562A62D0E400C962C4 /* MetalLearn */ = {
 			isa = PBXGroup;
 			children = (
+				6A9120692A62D50B00C962C4 /* Info.plist */,
 				6A9120572A62D0E400C962C4 /* MetalLearnApp.swift */,
 				6A9120592A62D0E400C962C4 /* ContentView.swift */,
 				6A91205B2A62D0E500C962C4 /* Assets.xcassets */,
 				6A91205D2A62D0E500C962C4 /* Preview Content */,
+				6A9120672A62D1F900C962C4 /* MetalShading.metal */,
+				6A91206A2A62D6AF00C962C4 /* ShaderController.swift */,
+				6A9120702A63893E00C962C4 /* MetalViewRepresentable.swift */,
+				6A9120722A63985600C962C4 /* definitions.h */,
 			);
 			path = MetalLearn;
 			sourceTree = "<group>";
@@ -137,6 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A91206B2A62D6AF00C962C4 /* ShaderController.swift in Sources */,
+				6A9120682A62D1F900C962C4 /* MetalShading.metal in Sources */,
+				6A9120712A63893E00C962C4 /* MetalViewRepresentable.swift in Sources */,
 				6A91205A2A62D0E400C962C4 /* ContentView.swift in Sources */,
 				6A9120582A62D0E400C962C4 /* MetalLearnApp.swift in Sources */,
 			);
@@ -270,6 +286,7 @@
 				DEVELOPMENT_TEAM = 9CPQ5HZ2TL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MetalLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -283,6 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ada.MetalLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = MetalLearn/definitions.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,6 +317,7 @@
 				DEVELOPMENT_TEAM = 9CPQ5HZ2TL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MetalLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,6 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ada.MetalLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = MetalLearn/definitions.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

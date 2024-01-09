@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    //represents the device (usually the GPU) on which Metal will run.
+    let device = MTLCreateSystemDefaultDevice()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack{
+            MetalViewRepresentable().ignoresSafeArea()
         }
-        .padding()
     }
 }
 
